@@ -12,7 +12,7 @@ const catImg = document.getElementById('cat');
 const getCats = async () => {
     try {
         const data = await fetch(BASE_URL);
-        const json = await data.json();
+        const json = await data.json(); // pega a string e converte para json
 
         return json.webpurl;    
     } catch (error) {
