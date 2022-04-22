@@ -1,0 +1,47 @@
+body{
+    background: #fafafa;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image: url(dino.png);
+    position: absolute; /* Position serve para definir a forma como os elementos vão se posicionar dentro do html. Absolute -> o elemento vai ficar na posição que eu definir independente do que tiver e volta.*/
+    bottom: 0;
+}
+
+.cactos {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image: url(cactus.png);
+}
+
+.game-over {
+    text-align: center;
+    color: cornflowerblue;
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+@keyframes deslizarParaDireita {
+/* criar uma animação (deserto deslizando para direita de maneira animada) -> keyframes servem para definir etapas de uma animação em css*/
+    from { /* do começo da animação */
+        background-position: 70000%;
+    }
+    to { /* ao final da animação */
+        background-position: 0;
+    }
+} 
+
+/* deserto*/
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(background.png);
+    background-repeat: repeat-x; /* animação vai repetir de maneira infinita. Deserto vai se estender independente do tamanho da tela */
+    animation: deslizarParaDireita 600s infinite linear; /* o deserto vai deslizar para a direita com a cada 600s de maneira infinita e linear (tempo da animação -> linear executa a animação de forma igual do começo ao fim */
+    width: 100%;
+    height: 200px;
+}
